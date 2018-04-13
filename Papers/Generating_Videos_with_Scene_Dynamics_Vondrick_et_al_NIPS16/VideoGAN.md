@@ -1,8 +1,9 @@
-# Generating Videos with Scene Dynamics
-### Carl Vondrick, Hamed Pirsiavash, Antonio Torralba
-### NIPS 2016
-
-Link to paper : http://carlvondrick.com/tinyvideo/
+<p align="center">
+<b>Generating Videos with Scene Dynamics</b><br>
+Carl Vondrick, Hamed Pirsiavash, Antonio Torralba<br>
+NIPS 2016<br>
+<a href="http://carlvondrick.com/tinyvideo/">Link to paper</a>
+</p>
 
 #### Problem 
 
