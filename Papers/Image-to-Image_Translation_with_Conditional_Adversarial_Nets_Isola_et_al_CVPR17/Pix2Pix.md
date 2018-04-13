@@ -1,9 +1,9 @@
-# Image-to-Image Translation with Conditional Adversarial Nets
-## Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, Alexei A. Efros
-## Univerity of California, Berkeley
-## CVPR 2017
-
-Link to paper : https://phillipi.github.io/pix2pix/
+<p align="center">
+<b>Image-to-Image Translation with Conditional Adversarial Nets</b><br>
+Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, Alexei A. Efros<br>
+CVPR 2017<br>
+<a href="https://phillipi.github.io/pix2pix/">Link to paper</a>
+</p>
 
 ### Problem 
 
