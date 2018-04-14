@@ -19,9 +19,11 @@ CVPR 2017<br>
 
 ### How was it solved ?
 
-In the paper the authors propose to use a conditional GAN instead of a traditional GAN. They show that cGANs produce results that both capture low and high frequencies in the image. 
+In the paper, the authors propose to use a conditional GAN instead of a traditional GAN. They condition on the input image both the generator and the discriminator and show that cGANs produce better results and are able to both capture low and high frequencies of images. 
 
 * `Generator architecture` : the generator architecture is very simple and based on a U-Net [1]. It is made of an encoder and a decoder that are mirror of each other with skip connections between the encoder and the decoder. Note that skip connections are very important to get results with many details (see figure 5 in the paper).
+
+* Add dropout for stochasticity
 
 * `Discriminator architecture` :  
 
@@ -33,6 +35,8 @@ In the paper the authors propose to use a conditional GAN instead of a tradition
 
 ### Results
 
+* Please refer to the paper to see a wide variety of results on many different type of image to image translation problems.
+* Christopher Hesse also made an interactive online demo available here : https://affinelayer.com/pixsrv/
 
 ### References
 
