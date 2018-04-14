@@ -5,9 +5,9 @@ CVPR 2017<br>
 <a href="https://phillipi.github.io/pix2pix/">Link to paper</a>
 </p>
 
-### Problem 
+### Context 
 
-* The paper tackles the problem of image translation, i.e mapping an image to another image automatically without user intervention. Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+* The paper tackles the problem of image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
 
 ### Novelty and contributions :
 
