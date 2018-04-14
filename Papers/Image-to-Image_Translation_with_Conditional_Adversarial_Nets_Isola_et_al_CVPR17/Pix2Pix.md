@@ -36,4 +36,4 @@ In the paper the authors propose to use a conditional GAN instead of a tradition
 
 ### References
 
-* O. Ronneberger, P. Fischer, and T. Brox.   U-net:  Convoluional networks for biomedical image segmentation. In MICCAI, pages 234–241. Springer, 2015.
+* [1] O. Ronneberger, P. Fischer, and T. Brox.   U-net:  Convoluional networks for biomedical image segmentation. In MICCAI, pages 234–241. Springer, 2015.
