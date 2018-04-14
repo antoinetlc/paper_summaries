@@ -29,6 +29,8 @@ In the paper the authors propose to use a conditional GAN instead of a tradition
 
 * `Reconstruction loss` : the reconstruction loss is a sum of two terms : the conditional adversarial loss and a reconstruction loss using L1 distance between the target image and the image the generator creates. They prefer using a L1 distance instead of L2 as L1 tends to gives less blurry results
 
+![Loss function](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Images/loss_function.png)
+
 ### Results
 
 
