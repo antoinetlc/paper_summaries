@@ -16,17 +16,17 @@ ICCV 2017<br>
 
 #### What are unpaired images ?
 
-* A set of paired images consists of a set couples of images (x, y) and the goal of an image-to-image translation algorithm would be to learn the mapping from x to y given x as the input and y as a target. In this case, the algorithm knows that x should map to y.
+* *Paired images* consist of a set of couples of images (x, y). The goal of an image-to-image translation algorithm with a dataset of *paired images* is to learn the mapping from x to y knowing that x is the input and y is the output.
 
-* Unpaired images consist of **two** sets of images X and Y taken from two probability distribution. An image-to-image translation algorithm should learn the mapping from the distribution of X to the distribution of Y with only examples of Xs and Ys. In this case, the mapping has to be learning without knowing which x map to which y (in the dataset, some x in X might not have a corresponging y in Y). 
+* *Unpaired images* consist of **two** sets of images X and Y taken from two probability distribution. The goal of an image-to-image translation algorithm with a dataset of *unpaired images* is to learn the mapping from X to Y with only separate samples of Xs and Ys. In this case, the mapping has to learn without knowing which x map to which y (in the dataset, some x in X might not have a corresponging y in Y).
+
+* Datasets of unpaired images are more easily accessible, which makes the problem very important.
 
 * See figure 2 of the paper for a good visual understanding of paired and unpaired image sets.
 
 ### Novelty and contributions :
 
-* The paper provides a general framework for image to image translation using conditonal generative adversarial networks (cGAN) that produces sharp results and works on a large variety of problems.
-
-* It also studies the influence of the different architectures of the discriminator and generator and compare how changing the loss function affect the results.
+* Unpaired image-to-image translations is a highly under constrained problem as a given x can be mapped to an infinite number of different y (the mapping does not have a target output). In order to impose that the output of the mapping is paired to the input in a meaningful way, the paper proposes train networks with cycle consistency. Such framework is not application dependent and can be applied to a wide range of problems. 
 
 ### How was it solved ?
 
