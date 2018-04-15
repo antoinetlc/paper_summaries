@@ -10,7 +10,17 @@ ICCV 2017<br>
 
 ### Context 
 
-* The paper tackles the problem of image to image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+* The paper tackles the problem of image to image translation, i.e mapping an image to another image automatically without user intervention, using a set of **unpaired images**. Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+
+* This work differs from the work of Isola et al., [Image-to-Image Translation with Conditional Adversarial Nets](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Pix2Pix.md), in the sense that the dataset is made of unpaired images.
+
+#### What are unpaired images ?
+
+* A set of paired images consists of a set couples of images (x, y) and the goal of an image-to-image translation algorithm would be to learn the mapping from x to y given x as the input and y as a target. In this case, the algorithm knows that x should map to y.
+
+* Unpaired images consist of **two** sets of images X and Y taken from two probability distribution. An image-to-image translation algorithm should learn the mapping from the distribution of X to the distribution of Y with only examples of Xs and Ys. In this case, the mapping has to be learning without knowing which x map to which y (in the dataset, some x in X might not have a corresponging y in Y). 
+
+* See figure 2 of the paper for a good visual understanding of paired and unpaired image sets.
 
 ### Novelty and contributions :
 
