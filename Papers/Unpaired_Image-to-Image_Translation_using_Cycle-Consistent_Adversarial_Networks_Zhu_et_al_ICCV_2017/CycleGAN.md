@@ -1,11 +1,12 @@
 <p align="center">
 <b>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</b><br>
 Jun-Yan Zhu*, Taesung Park*, Phillip Isola, Alexei A. Efros<br>
+* denotes equal contribution <br>
 ICCV 2017<br>
 <a href="https://junyanz.github.io/CycleGAN/">Link to paper</a>
 </p>
 
-![Examples of image to image translation](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Images/teaser.jpg)
+![Examples of image to image translation](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/teaser.png)
 
 ### Context 
 
