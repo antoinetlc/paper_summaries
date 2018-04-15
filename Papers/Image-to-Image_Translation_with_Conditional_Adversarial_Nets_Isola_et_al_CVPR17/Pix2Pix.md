@@ -17,7 +17,7 @@ CVPR 2017<br>
 
 * It also studies the influence of the different architectures of the discriminator and generator and compare how changing the loss function affect the results.
 
-### How was it solved ?
+### Proposed approach
 
 In the paper, the authors propose to use a conditional GAN instead of a traditional GAN. They condition on the input image both the generator and the discriminator and show that cGANs produce better results and are able to both capture low and high frequencies of images. The conditioning is very general as it is done using the discriminator direclty and does not depend on any application specific regularization term.
 
