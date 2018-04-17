@@ -27,7 +27,7 @@ In the paper, the authors propose to use conditional GANs instead of traditional
 
 * `Discriminator architecture`. They propose to use a discriminator that focuses on classifying wether high frequency details are correct or not as the low frequencies can be captured using a L1 regularization (see loss function). In order to achieve this, the discriminator looks at all the NxN patches of an image and classifies wether each patch looks real or not. The output of the discriminator is the average of the probabilities for each patch. Results for various values of N are shown in figure 6 of the paper.
 
-* `Reconstruction loss`. The reconstruction loss is a sum of two terms : the conditional adversarial loss and a reconstruction loss using L1 distance between the target image and the image the generator creates. Using a L1 distance instead of a L2 is prefered as L1 tends to gives less blurry results. The final loss function is :
+* `Loss function`. The reconstruction loss is a sum of two terms : the conditional adversarial loss and a reconstruction loss using L1 distance between the target image and the image the generator creates. Using a L1 distance instead of a L2 is prefered as L1 tends to gives less blurry results. The final loss function is :
 
 ![Loss function](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Images/loss_function.png)
 
