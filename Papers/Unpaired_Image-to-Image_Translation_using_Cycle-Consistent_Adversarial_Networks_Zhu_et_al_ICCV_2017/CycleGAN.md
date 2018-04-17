@@ -34,11 +34,17 @@ ICCV 2017<br>
 
 * `Loss function`. The loss function is made of two main terms : the adversarial losses for the mapping G and F and the cycle consistency losses.
 
-  * `Adversarial losses`. The adversarial losses allow the training of the mapping G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F.
+  * `Adversarial losses`. The adversarial losses allow the training of the mapping G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F. The adversarial loss for the couple (G, D_Y) is given by the equation below. The couple (F, D_X) has a similar loss. 
+
+![Adversarial loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/adversarial_loss.png)
 
   * `Cycle consistency`.  The cycle consistency loss is necessary, so that the mapping G and F try to pair their input and output in a meaningful way. Without cycle consistency the mapping G could match an input to any image in the domain F. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Both directions are necessary to get F and G that act as inverses of each other.
 
-![Loss function](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Images/loss_function.png)
+![Cycle consistency loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/cycle_consistency.png)
+
+* The final optimization problem is :
+
+![Optimization problem](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/optimization_problem.png)
 
 ### Results
 
