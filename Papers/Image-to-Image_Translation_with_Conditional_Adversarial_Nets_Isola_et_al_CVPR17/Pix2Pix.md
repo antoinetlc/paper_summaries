@@ -13,7 +13,7 @@ CVPR 2017<br>
 
 ### Novelty and contributions :
 
-* The paper provides a general framework for image to image translation using conditonal generative adversarial networks (cGAN) that produces sharp results and works on a large variety of problems.
+* The paper provides a general framework for image to image translation using conditonal generative adversarial networks (cGAN) that produces good results on a large variety of problems.
 
 * It also studies the influence of the different architectures of the discriminator and generator and compare how changing the loss function affect the results.
 
