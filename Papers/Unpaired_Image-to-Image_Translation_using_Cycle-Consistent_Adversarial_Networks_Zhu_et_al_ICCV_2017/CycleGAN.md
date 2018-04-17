@@ -30,7 +30,7 @@ ICCV 2017<br>
 
 ### How was it solved ?
 
-* The approach that the authors take is to train two sets of generative adversarial networks. The first one denoted (G, D_Y) learns a mapping from the domain X to Y. The second denoted (F, D_X) learns a mapping from the domain Y to X. These two networks are trained simultaneously.
+* The approach that the authors take is to train two sets of generative adversarial networks. The first one denoted (G, D_Y) (G is the generator and D_Y its corresponding discriminator) learns a mapping from the domain X to Y. The second denoted (F, D_X) (F is the generator and D_X its corresponding discriminator) learns a mapping from the domain Y to X. These two networks are trained simultaneously such that the two generators are inverse mapping of each other (see figure 4 of the paper for a visual understanding of what the cycle consistency means).
 
 * `Loss function`. The loss function is made of two main terms : the adversarial losses for the mapping G and F and the cycle consistency losses.
 
@@ -38,13 +38,15 @@ ICCV 2017<br>
 
 ![Adversarial loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/adversarial_loss.png)
 
-  * `Cycle consistency`.  The cycle consistency loss is necessary, so that the mapping G and F try to pair their input and output in a meaningful way. Without cycle consistency the mapping G could match an input to any image in the domain F. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Both directions are necessary to get F and G that act as inverses of each other.
+  * `Cycle consistency`.  The cycle consistency loss is necessary, so that the mapping G and F try to pair their input and output in a meaningful way. Without cycle consistency the mapping G could match an input to any image in the domain F. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Both directions are necessary to get F and G that act as inverses of each other (see figure 7 of the paper to see results with only a single direction).
 
 ![Cycle consistency loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/cycle_consistency.png)
 
 * The final optimization problem is :
 
 ![Optimization problem](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/optimization_problem.png)
+
+* `Network architecture`. The authors used CNNs for the generators and discriminator. In particular the discriminator is a patchGAN classifying wether 70x70 overlapping patches look real or not. The generator is based on Johnson et al. architecture [1]
 
 ### Results
 
@@ -54,4 +56,4 @@ ICCV 2017<br>
 
 ### References
 
-* [1] O. Ronneberger, P. Fischer, and T. Brox.   U-net:  Convoluional networks for biomedical image segmentation. In MICCAI, pages 234–241. Springer, 2015.
+* [1] Johnson, A. Alahi, and L. Fei-Fei. Perceptual losses for real-time style transfer and super-resolution. In ECCV, pages 694–711. Springer, 2016.
