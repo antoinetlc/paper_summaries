@@ -34,7 +34,7 @@ ICCV 2017<br>
 
 * `Loss function`. The loss function is made of two main terms : the adversarial losses for the mapping G and F and the cycle consistency losses.
 
-  * `Adversarial losses`. The adversarial losses allow the training of the mapping G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F. The adversarial loss for the couple (G, D_Y) is given by the equation below. The couple (F, D_X) has a similar loss. 
+  * `Adversarial losses`. The adversarial losses allow the training of the mapping G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F. The adversarial loss for the couple (G, D_Y) is given by the equation below. The couple (F, D_X) has a similar loss. Note that the authors used a least-squares adversarial loss for training.
 
 ![Adversarial loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/adversarial_loss.png)
 
@@ -50,9 +50,7 @@ ICCV 2017<br>
 
 ### Results
 
-* Please refer to the paper to see a wide variety of results on many different type of image to image translation problems (see section 4)
-
-* Christopher Hesse also made an interactive online demo available here : https://affinelayer.com/pixsrv/
+* Please refer to the paper (pages 11 to 16) or the author's website for more results and limitations.
 
 ### References
 
