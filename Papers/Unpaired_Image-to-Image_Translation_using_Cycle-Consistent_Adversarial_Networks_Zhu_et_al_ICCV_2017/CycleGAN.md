@@ -30,7 +30,13 @@ ICCV 2017<br>
 
 ### How was it solved ?
 
-* `Reconstruction loss` : the reconstruction loss is a sum of two terms : the conditional adversarial loss and a reconstruction loss using L1 distance between the target image and the image the generator creates. Using a L1 distance instead of L2 is prefered as L1 tends to gives less blurry results. The final loss function is :
+* The approach that the authors take is to train two sets of generative adversarial networks. The first one denoted (G, D_Y) learns a mapping from the domain X to Y. The second denoted (F, D_X) learns a mapping from the domain Y to X. These two networks are trained simultaneously.
+
+* `Loss function`. The loss function is made of two main terms : the adversarial losses for the mapping G and F and the cycle consistency losses.
+
+  * `Adversarial losses`. The adversarial losses allow the training of the mapping G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F.
+
+  * `Cycle consistency`.  The cycle consistency loss is necessary, so that the mapping G and F try to pair their input and output in a meaningful way. Without cycle consistency the mapping G could match an input to any image in the domain F. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Both directions are necessary to get F and G that act as inverses of each other.
 
 ![Loss function](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Images/loss_function.png)
 
