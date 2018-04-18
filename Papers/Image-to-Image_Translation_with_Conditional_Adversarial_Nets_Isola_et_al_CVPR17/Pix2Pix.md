@@ -9,7 +9,7 @@ CVPR 2017<br>
 
 ### Context 
 
-* The paper tackles the problem of image-to-image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+* The paper tackles the problem of image-to-image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such a problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
 
 ### Novelty and contributions :
 
