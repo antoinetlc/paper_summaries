@@ -1,6 +1,7 @@
 # Paper summaries
 Summaries of machine learning, computer vision and graphics papers
 
+Last updated : April, 18th, 2018
 
 ### Generative Adversarial Networks
 
