@@ -9,13 +9,13 @@ CVPR 2017<br>
 
 ### Context 
 
-* The paper tackles the problem of image to image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+* The paper tackles the problem of image-to-image translation, i.e mapping an image to another image automatically without user intervention, using a set of paired images (input, target). Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
 
 ### Novelty and contributions :
 
-* The paper provides a general framework for image to image translation using conditonal generative adversarial networks (cGAN) that produces good results on a large variety of problems.
+* The paper provides a general framework for image-to-image translation using conditonal generative adversarial networks (cGAN) that produces good results on a large variety of problems.
 
-* It also studies the influence of the different architectures of the discriminator and generator and compare how changing the loss function affect the results.
+* It also studies the influence of the several architectures of the discriminator and the generator and compare how changing the loss function affects the results.
 
 ### Approach taken
 
