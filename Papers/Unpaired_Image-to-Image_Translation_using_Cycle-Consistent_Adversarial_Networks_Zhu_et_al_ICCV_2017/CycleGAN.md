@@ -16,19 +16,19 @@ ICCV 2017<br>
 
 #### What are unpaired images ?
 
-* *Paired images* consist of a set of couples of images (x, y). The goal of an image-to-image translation algorithm with a dataset of *paired images* is to learn the mapping from x to y knowing that x is the input and y is the output.
+* *Paired images* consist of a dataset of couples of images (x, y) that are linked to each other. The goal of an image-to-image translation algorithm with a dataset of *paired images* is to learn the mapping from x to y knowing that x is the input and y is the output.
 
-* *Unpaired images* consist of **two** sets of images X and Y taken from two probability distribution. The goal of an image-to-image translation algorithm with a dataset of *unpaired images* is to learn the mapping from X to Y with only separate samples of Xs and Ys. In this case, the mapping has to learn without knowing which x map to which y (in the dataset, some x in X might not have a corresponging y in Y).
+* A dataset of *unpaired images* consist of **two** separate sets of images X and Y. The goal of an image-to-image translation algorithm with a dataset of *unpaired images* is to learn a mapping from X to Y without knowing which x should map to which y. In this case, the algorithm has to understand the specificity of the domain X and the domain Y and pair its input (in X) to an output (in Y) in a meaningful way.
 
-* Datasets of unpaired images are more easily accessible, which makes the problem very important.
+* Pairing images can be a expensive process, therefore datasets of unpaired images are more widely accessible. This makes the problem very important in unsupervised learning.
 
 * See figure 2 of the paper for a good visual understanding of paired and unpaired image sets.
 
 ### Novelty and contributions :
 
-* Unpaired image-to-image translations is a highly under constrained problem as a given x can be mapped to an infinite number of different y (the mapping does not have a target output). In order to impose that the output of the mapping is paired to the input in a meaningful way, the paper proposes train networks with cycle consistency. Such framework is not application dependent and can be applied to a wide range of problems. 
+* Unpaired image-to-image translations is a highly under constrained problem as a given x can be mapped to an infinite number of different y (the mapping does not have a target output). In order to impose that the output of the mapping is paired to the input in a meaningful way, the paper proposes to train networks with a cycle consistency. Such framework is not application dependent and can be applied to a wide range of problems. 
 
-### How was it solved ?
+### Approach taken
 
 * The approach that the authors take is to train two sets of generative adversarial networks. The first one denoted (G, D_Y) (G is the generator and D_Y its corresponding discriminator) learns a mapping from the domain X to Y. The second denoted (F, D_X) (F is the generator and D_X its corresponding discriminator) learns a mapping from the domain Y to X. These two networks are trained simultaneously such that the two generators are inverse mapping of each other (see figure 4 of the paper for a visual understanding of what the cycle consistency means).
 
