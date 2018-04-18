@@ -32,13 +32,13 @@ ICCV 2017<br>
 
 * The approach that the authors take is to train two sets of generative adversarial networks. The first one denoted (G, D_Y) (G is the generator and D_Y its corresponding discriminator) learns a mapping from the domain X to Y. The second one denoted (F, D_X) (F is the generator and D_X its corresponding discriminator) learns a mapping from the domain Y to X. These two networks are trained simultaneously in such a way that the two generators are inverse mappings of each other (also called cycle consistency - see figure 4 of the paper for a visual understanding of cycle consistency).
 
-* `Loss function`. The loss function is made of two main terms : the adversarial losses for the mapping G and F and the cycle consistency losses.
+* `Loss function`. The loss function is made of two main terms : the adversarial losses for the mappings G and F and the cycle consistency losses.
 
   * `Adversarial losses`. The adversarial losses allow the training of the mappings G and F with their corresponding discriminator. This way G learns to map images from the domain X to the domain Y and conversely for F. The adversarial loss for the couple (G, D_Y) is given by the equation below. The couple (F, D_X) has a similar loss. Note that the authors obtained better results with a least-squares adversarial loss.
 
 ![Adversarial loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/adversarial_loss.png)
 
-  * `Cycle consistency`.  The cycle consistency losses are necessary, so that the mappings G and F try to pair their input and output in a meaningful (and are inverse of each other). Without cycle consistency the mapping G could match an input to any image in the domain Y. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Note that both directions are necessary to get F and G that act as inverses of each other (see figure 7 of the paper to see results with only a single direction).
+  * `Cycle consistency`.  The cycle consistency losses are necessary, so that the mappings G and F try to pair their input and output in a meaningful way (G and F also become inverse of each other). Without cycle consistency the mapping G could match an input to any image in the domain Y. The cycle consistency loss is divided in two terms : the *forward cycle consistency* and the *backward cycle consistency*. Note that both directions are necessary to get F and G that act as inverses of each other (see figure 7 of the paper to see results with only a single direction).
 
 ![Cycle consistency loss](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Unpaired_Image-to-Image_Translation_using_Cycle-Consistent_Adversarial_Networks_Zhu_et_al_ICCV_2017/Images/cycle_consistency.png)
 
