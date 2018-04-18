@@ -10,13 +10,13 @@ ICCV 2017<br>
 
 ### Context 
 
-* The paper tackles the problem of image to image translation, i.e mapping an image to another image automatically without user intervention, using a set of **unpaired images**. Such problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
+* The paper tackles the problem of image-to-image translation, i.e mapping an image to another image automatically without user intervention, using a set of **unpaired images**. Such a problem often arises in computer graphics and vision. An example could be mapping a sketch to a drawing or changing a satellite image to a map.
 
 * This work differs from the work of Isola et al., [Image-to-Image Translation with Conditional Adversarial Nets](https://github.com/antoinetlc/paper_summaries/blob/master/Papers/Image-to-Image_Translation_with_Conditional_Adversarial_Nets_Isola_et_al_CVPR17/Pix2Pix.md), in the sense that the dataset is made of unpaired images.
 
 #### What are unpaired images ?
 
-* *Paired images* consist of a dataset of couples of images (x, y) that are linked to each other. The goal of an image-to-image translation algorithm with a dataset of *paired images* is to learn the mapping from x to y knowing that x is the input and y is the output.
+* A dataset of *Paired images* consist of couples of images (x, y) that are linked to each other. The goal of an image-to-image translation algorithm with a dataset of *paired images* is to learn the mapping from x to y knowing that x is the input and y is the output.
 
 * A dataset of *unpaired images* consist of **two** separate sets of images X and Y. The goal of an image-to-image translation algorithm with a dataset of *unpaired images* is to learn a mapping from X to Y without knowing which x should map to which y. In this case, the algorithm has to understand the specificity of the domain X and the domain Y and pair its input (in X) to an output (in Y) in a meaningful way.
 
